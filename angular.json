@@ -15,7 +15,7 @@
           "options": {
             "outputPath": "dist/testjds-angular-yudha-rusdian",
             "index": "src/index.html",
-            "browser": "src/main.ts",
+            "browser": "src/main.js",
             "polyfills": [
               "zone.js"
             ],
@@ -23,8 +23,16 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "src/assets",
+                "output": "/assets/"
+              },
+              {
+                "glob": "**/*.png",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "/assets/leaflet/"
+              },
+              "src/favicon.ico",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.css"
@@ -81,8 +89,16 @@
             "assets": [
               {
                 "glob": "**/*",
-                "input": "public"
-              }
+                "input": "src/assets",
+                "output": "/assets/"
+              },
+              {
+                "glob": "**/*.png",
+                "input": "node_modules/leaflet/dist/images/",
+                "output": "/assets/leaflet/"
+              },
+              "src/favicon.ico",
+              "src/manifest.json"
             ],
             "styles": [
               "src/styles.css"
@@ -92,5 +108,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "104c6874-d4e4-4146-b42c-bd5fb596128e"
   }
 }
